@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Load external libraries from the web -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js@2.2.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <!-- The AR scene where everything happens -->
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+        <!-- The marker (your card) that triggers the video -->
+        <a-marker preset="custom" type="pattern" url="https://yourusername.github.io/ar-card-project/ar-card.patt">
+            <!-- The video that plays when the card is scanned -->
+            <a-video 
+                src="https://www.instagram.com/reel/DH3fidWyWJY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" 
+                width="1.125" 
+                height="2"
+                position="0 0 0" 
+                rotation="0 0 0" 
+                autoplay="true">
+            </a-video>
+        </a-marker>
+        <!-- The camera entity to scan the real world -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
